@@ -87,6 +87,7 @@ hr {
     text-align: center;
     height: 312px;
     background: #161616;
+    /* background: #e9064c; */
     border-radius: 10px;
 }
 
@@ -97,7 +98,8 @@ hr {
 .math-group-blog ul li {
     list-style: none;
     padding: 16px 25px;
-    background-image: linear-gradient(#FD014D, #9E1D49);
+    /* background-image: linear-gradient(#FD014D, #9E1D49); */
+    background-color: #FFFFFF;
     font-weight: 500;
     font-size: 20px;
     border-radius: 10px;
@@ -110,8 +112,17 @@ hr {
 
 .math-group-blog ul li a {
     text-decoration: none;
+    color: #9E1D49;
+}
+
+.math-group-blog ul .active-btn {
+    background-image: linear-gradient(#FD014D, #9E1D49);
+}
+
+.math-group-blog ul .active-btn a {
     color: #FFFFFF;
 }
+
 
 .fifa-world-cup .blogs,
 .fifa-world-cup .matches {
@@ -247,4 +258,86 @@ footer {
 .footer-component ul li a {
     text-decoration: none;
     color: #B9B9B9;
+}
+
+
+
+/* Animation css styles  */
+/* Icon Wobble Horizontal */
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        transform: translateX(6px);
+    }
+
+    33.3% {
+        transform: translateX(-5px);
+    }
+
+    49.95% {
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        transform: translateX(6px);
+    }
+
+    33.3% {
+        transform: translateX(-5px);
+    }
+
+    49.95% {
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hvr-icon-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+}
+
+.hvr-icon-wobble-horizontal .hvr-icon {
+    transform: translateZ(0);
+}
+
+.hvr-icon-wobble-horizontal:hover .hvr-icon,
+.hvr-icon-wobble-horizontal:focus .hvr-icon,
+.hvr-icon-wobble-horizontal:active .hvr-icon {
+    animation-name: hvr-icon-wobble-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.watch-live-btn a:hover {
+    background-image: linear-gradient(#c3156d, #e8cd21);
+    transition: all 0.5 ease;
 }
