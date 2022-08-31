@@ -29,6 +29,9 @@ hr {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ----------------------
+    Fifa World Banner styles
+-------------------------  */
 .world-cup-banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -66,6 +69,11 @@ hr {
     color: #FFFFFF;
 }
 
+.watch-live-btn a:hover {
+    background-image: linear-gradient(#c3156d, #e8cd21);
+    transition: all 0.5 ease;
+}
+
 .world-cup-banner .world-cup-banner-player img {
     width: 100%;
     padding: 33px 80px 0px 0px;
@@ -75,8 +83,7 @@ hr {
     Fifa World Cup styles
 -------------------------  */
 .fifa-world-cup {
-    display: grid;
-    grid-template-columns: 25% 75%;
+    display: flex;
     margin: 130px 0px;
 }
 
@@ -85,9 +92,9 @@ hr {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 426px;
     height: 312px;
     background: #161616;
-    /* background: #e9064c; */
     border-radius: 10px;
 }
 
@@ -97,12 +104,6 @@ hr {
 
 .math-group-blog ul li {
     list-style: none;
-    padding: 16px 25px;
-    /* background-image: linear-gradient(#FD014D, #9E1D49); */
-    background-color: #FFFFFF;
-    font-weight: 500;
-    font-size: 20px;
-    border-radius: 10px;
     margin-bottom: 30px;
 }
 
@@ -111,25 +112,28 @@ hr {
 }
 
 .math-group-blog ul li a {
+    display: block;
     text-decoration: none;
     color: #9E1D49;
+    padding: 16px 25px;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
-.math-group-blog ul .active-btn {
+.math-group-blog ul li .active-btn {
     background-image: linear-gradient(#FD014D, #9E1D49);
-}
-
-.math-group-blog ul .active-btn a {
     color: #FFFFFF;
 }
-
 
 .fifa-world-cup .blogs,
 .fifa-world-cup .matches {
     display: grid;
-    grid-template-columns: 31% 31% 31%;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin-left: 24px;
+    margin-left: 28px;
+    justify-content: space-between;
 }
 
 .fifa-world-cup .blog,
@@ -177,6 +181,21 @@ hr {
 
 .duration .duration-time .fa-clock {
     padding-right: 5px;
+}
+
+.view-all-btn-info {
+    margin-top: 20px;
+    display: flex;
+    display: none;
+    justify-content: center;
+}
+
+.view-all-blog {
+    text-decoration: none;
+    background-image: linear-gradient(#FD014D, #9E1D49);
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border-radius: 5px;
 }
 
 /* ----------------------
@@ -280,7 +299,6 @@ footer {
 }
 
 
-
 /* Animation css styles  */
 /* Icon Wobble Horizontal */
 @-webkit-keyframes hvr-icon-wobble-horizontal {
@@ -356,7 +374,151 @@ footer {
     animation-iteration-count: 1;
 }
 
-.watch-live-btn a:hover {
-    background-image: linear-gradient(#c3156d, #e8cd21);
-    transition: all 0.5 ease;
+/* ----------------------
+        Media Queries
+-------------------------  */
+/* Mobile devices */
+@media only screen and (max-width: 688px) {
+    .world-cup-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    .world-cup-banner .world-cup-banner-title {
+        font-size: 36px;
+    }
+
+    .world-cup-banner .world-cup-banner-info {
+        padding: 20px 30px;
+    }
+
+    .world-cup-banner .world-cup-banner-player img {
+        padding: 0;
+        width: 75%;
+    }
+
+    .fifa-world-cup {
+        display: block;
+    }
+
+    .fifa-world-cup .blogs,
+    .fifa-world-cup .matches {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
+    }
+
+    .math-group-blog {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .footer-component {
+        text-align: center;
+    }
+
+    .footer-component ul {
+        display: block;
+        padding-left: 0px;
+    }
+
+    .footer-component ul li {
+        margin-right: 0;
+    }
+
+    .footer-component ul li a {
+        font-size: 25px;
+        line-height: 60px;
+    }
+
+    .social-icons li a {
+        text-align: center;
+        display: inline;
+        background-color: transparent;
+    }
+}
+
+/* tablet devices  */
+@media only screen and (min-width:688px) and (max-width: 992px) {
+
+    .world-cup-banner .world-cup-banner-info {
+        padding: 0px 30px;
+    }
+
+    .world-cup-banner .world-cup-banner-title {
+        font-size: 35px;
+    }
+
+    .world-cup-banner p {
+        font-size: 14px;
+    }
+
+    .watch-live-btn {
+        padding-top: 0;
+        padding-bottom: 20px
+    }
+
+    .world-cup-banner .world-cup-banner-player img {
+        width: 95%;
+        padding: 20px 10px 0px 0px;
+    }
+
+    .math-group-blog {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+
+    }
+
+    .math-group-blog nav {
+        width: 100%;
+    }
+
+    .math-group-blog ul {
+        display: flex;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .math-group-blog ul li {
+        margin-right: 30px;
+        width: 30%;
+    }
+
+    .math-group-blog ul li:last-child {
+        margin-right: 0;
+    }
+
+    .math-group-blog ul li a {
+        padding: 16px 0px;
+        font-size: 18px;
+    }
+
+    .fifa-world-cup {
+        display: block;
+    }
+
+    .fifa-world-cup .blogs,
+    .fifa-world-cup .matches {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-left: 0px;
+    }
+
+    #blog-count {
+        display: none;
+    }
+
+    .view-all-btn-info {
+        display: block;
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .footer-component ul li {
+        float: left;
+    }
 }
