@@ -74,9 +74,15 @@ hr {
     transition: all 0.5 ease;
 }
 
+.world-cup-banner .world-cup-banner-player {
+    width: 90%;
+    margin: 56px 0px 0px 20px;
+    text-align: center;
+}
+
 .world-cup-banner .world-cup-banner-player img {
-    width: 100%;
-    padding: 33px 80px 0px 0px;
+    width: 95%;
+    height: 100%;
 }
 
 /* ----------------------
@@ -462,7 +468,7 @@ footer {
 
     .world-cup-banner .world-cup-banner-player img {
         width: 95%;
-        padding: 20px 10px 0px 0px;
+        /* padding: 20px 10px 0px 0px; */
     }
 
     .math-group-blog {
